@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #211616, #fb3d3d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 1.5em;
+}
+
+.container {
+    max-width: 1000px;
+    width: 92.5%;
+    padding: 0 .5em;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: 1em 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    color: #fcfcfc;
+}
+
+header img {
+    width: 5rem;
+}
+
+.main-container {
+    display: flex;
+    gap: .75em;
+    min-height: 50rem;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.player, .control {
+    border-radius: .5em;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.player {
+    width: 42.5%;
+    background-color: #e8adad;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.player .total-score-title {
+    font-size: 3.5rem;
+    margin-bottom: .5em;
+}
+
+.player .total-score {
+    font-size: 6rem;
+    color: #fb3d3d;
+}
+
+.player .current-score-container {
+    background-color: #fb3d3d;
+    color: #fcfcfc;
+    padding: .75em 2.25em;
+    border-radius: .5em;
+}
+
+.player .current-score-title {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.player .current-score {
+    font-size: 4rem;
+}
+
+.player--1 {
+    order: 1;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: linear-gradient(to right bottom, #292727, #1a1a1a);
+    width: 15%;
+    min-width: 15rem;
+    flex-grow: 0;
+}
+
+.control img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.4rem;
+    width: 100%;
+    padding: .75em .5em;
+    background-color: #e8d9d9;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    text-transform: inherit;
+    transition: background-color .4s;
+}
+
+button:hover {
+    background-color: #d2c7c7;
+}
+
+.active {
+    opacity: 1;
+    transition: .4s opacity;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .player {
+        flex-direction: row;
+    }
+
+    .player, .control {
+        width: 100%;
+    }
+
+    .control {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .control img {
+        width: 10rem;
+        margin-bottom: 0;
+    }
+
+    .buttons {
+        width: 50%;
+    }
+}
+
+@media(max-width: 576px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 360px) {
+    html {
+        font-size: 7.5px;
+    }
+
+    .player .total-score-title {
+        font-size: 3rem;
+    }
+    
+    .player .total-score {
+        font-size: 5rem;
+    }
+    
+    .player .current-score-title {
+        font-size: 1.5rem;
+    }
+    
+    .player .current-score {
+        font-size: 3rem;
+    }
+}
