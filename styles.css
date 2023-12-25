@@ -71,6 +71,7 @@ header img {
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    transition: .6s opacity;
 }
 
 .player .total-score-title {
@@ -135,7 +136,7 @@ button {
     border-radius: 1em;
     cursor: pointer;
     text-transform: inherit;
-    transition: background-color .4s;
+    transition: background-color .6s;
 }
 
 button:hover {
@@ -144,7 +145,16 @@ button:hover {
 
 .active {
     opacity: 1;
-    transition: .4s opacity;
+    transition: .6s opacity;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.winner {
+    background-color: #b6f080;
+    transition: .6s background-color;
 }
 
 /* Media Queries */
